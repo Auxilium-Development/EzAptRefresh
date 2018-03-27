@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>EzApt</string>
+	<string>EzUICache</string>
 	<key>CFBundleExecutable</key>
-	<string>EzApt</string>
+	<string>EzUICache</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.m4cs.control-center.ezapt</string>
+	<string>com.ezccmodules.control-center.ezuicache</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -26,13 +26,13 @@
 		<integer>2</integer>
 	</array>
 	<key>NSPrincipalClass</key>
-	<string>EzRespringModule</string>
+	<string>EzUICache</string>
 	<key>ModuleSize</key>
 	<dict>
 		<key>columns</key>
-		<string>1</string>
+		<string>4</string>
 		<key>rows</key>
-		<string>1</string>
+		<string>2</string>
 	</dict>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
