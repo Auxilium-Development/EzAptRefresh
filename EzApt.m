@@ -15,13 +15,13 @@
 }
 
 - (BOOL)isSelected {
-	return self.EzRespring;
+	return self.EzApt;
 }
 
 - (void)setSelected:(BOOL)selected {
-	self.EzRespring = selected;
+	self.EzApt = selected;
 	[super refreshState];
-    [self respring];
+    [self aptget];
 }
 
 - (void)aptget {
