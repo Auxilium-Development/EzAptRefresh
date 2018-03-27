@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>EzReboot</string>
+	<string>EzRespring</string>
 	<key>CFBundleExecutable</key>
-	<string>EzReboot</string>
+	<string>EzRespring</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.m4cs.control-center.ezreboot</string>
+	<string>com.m4cs.control-center.ezrespring</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -26,13 +26,13 @@
 		<integer>2</integer>
 	</array>
 	<key>NSPrincipalClass</key>
-	<string>EzRebootModule</string>
+	<string>EzRespringModule</string>
 	<key>ModuleSize</key>
 	<dict>
 		<key>columns</key>
-		<string>4</string>
+		<string>1</string>
 		<key>rows</key>
-		<string>2</string>
+		<string>1</string>
 	</dict>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
