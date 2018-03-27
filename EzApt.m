@@ -1,11 +1,11 @@
-#import "EzRespringModule.h"
+#import "EzApt.h"
 #import <spawn.h>
 
 @interface UIImage ()
 + (UIImage *)imageNamed:(NSString *)name inBundle:(NSBundle *)bundle;
 @end
 
-@implementation EzRespringModule
+@implementation EzAptModule
 - (UIImage *)iconGlyph {
 	return [UIImage imageNamed:@"Icon" inBundle:[NSBundle bundleForClass:[self class]]];
 }
@@ -24,11 +24,11 @@
     [self respring];
 }
 
-- (void)respring {
+- (void)aptget {
     pid_t pid;
     int status;
-    const char* args[] = {"killall", "-9", "backboardd", NULL};
-    posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+    const char* args[] = {"apt-get", "update",NULL};
+    posix_spawn(&pid, "/usr/bin/apt-get", NULL, NULL, (char* const*)args, NULL);
     waitpid(pid, &status, WEXITED);
 }
 @end
