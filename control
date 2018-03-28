@@ -6,3 +6,4 @@ Description: Apt-get Update Toggle
 Author: Auxilium Development
 Section: Tweaks
 Maintainer: Auxilium Development
+Depends: apt7

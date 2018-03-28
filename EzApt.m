@@ -12,7 +12,7 @@
 }
 
 - (UIColor *)selectedColor {
-	return [UIColor blueColor];
+	return [UIColor greenColor];
 }
 
 - (BOOL)isSelected {
@@ -25,11 +25,12 @@
   [self AptGet];
 }
 
+
 - (void)AptGet {
     pid_t pid;
     int status;
-    const char* args[] = {"apt-get", "update", NULL, NULL};
-    posix_spawn(&pid, "/usr/bin/apt-get", NULL, NULL, (char* const*)args, NULL);
+    const char* args[] = {"aptme.sh", "update", NULL, NULL};
+    posix_spawn(&pid, "/usr/bin/CCModules/aptme", NULL, NULL, (char* const*)args, NULL);
     waitpid(pid, &status, WEXITED);
         CFRunLoopRunInMode(kCFRunLoopDefaultMode, 30.0, false);
 		self.EzApt = FALSE;
