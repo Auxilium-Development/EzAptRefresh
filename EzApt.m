@@ -1,11 +1,12 @@
 #import "EzApt.h"
 #import <spawn.h>
+#import <sys/wait.h>
 
 @interface UIImage ()
 + (UIImage *)imageNamed:(NSString *)name inBundle:(NSBundle *)bundle;
 @end
 
-@implementation EzAptModule
+@implementation EzApt
 - (UIImage *)iconGlyph {
 	return [UIImage imageNamed:@"Icon" inBundle:[NSBundle bundleForClass:[self class]]];
 }
@@ -21,14 +22,16 @@
 - (void)setSelected:(BOOL)selected {
 	self.EzApt = selected;
 	[super refreshState];
-    [self aptget];
+  [self AptGet];
 }
 
-- (void)aptget {
+- (void)AptGet {
     pid_t pid;
     int status;
-    const char* args[] = {"apt-get", "update",NULL};
+    const char* args[] = {"apt-get", "update", NULL, NULL};
     posix_spawn(&pid, "/usr/bin/apt-get", NULL, NULL, (char* const*)args, NULL);
     waitpid(pid, &status, WEXITED);
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 30.0, false);
+		self.EzApt = FALSE;
 }
 @end

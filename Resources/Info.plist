@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>EzUICache</string>
+	<string>EzApt</string>
 	<key>CFBundleExecutable</key>
-	<string>EzUICache</string>
+	<string>EzApt</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ezccmodules.control-center.ezuicache</string>
+	<string>com.ezccmodules.control-center.apt</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleInfoDictionaryVersion</key>
