@@ -8,3 +8,10 @@ $(BUNDLE_NAME)_LDFLAGS += $(THEOS_PROJECT_DIR)/Frameworks/ControlCenterUIKit.tbd
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/ControlCenter/Bundles/
 
 include $(THEOS_MAKE_PATH)/bundle.mk
+
+after-stage::
+	$(FAKEROOT) chmod 4755 $(THEOS_STAGING_DIR)/usr/bin/CCModules/aptme
+	$(FAKEROOT) chown 0:0 $(THEOS_STAGING_DIR)/usr/bin/CCModules/aptme
+    
+after-install::
+	install.exe "killall SpringBoard"
